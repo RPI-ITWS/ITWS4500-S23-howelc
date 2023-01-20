@@ -1,7 +1,5 @@
 
-
-
-
+This lab was fairly easy and straight forward, considering I did a similar thing for my lab 4 last semester. I used the NYT API this time, as I was able to easily get 200 articles for the news ticker. I focused on details and design, as I had quite a bit time to spend on those areas. The app is fully mobile compatible. I wrote JavaScript functions to change data, my favorite of which is the getTimeSinceUpload() function, as it required the most amount of thinking and effort. Overall, this was a fun first lab to start the semester with. 
 
 
 Works Cited:
@@ -18,4 +16,6 @@ CSS Structure and Media Queries inspired or taken from Cian Howell and Jerry Lu'
 
 Bootstrap Docs used for bootstrap classes and Icons https://getbootstrap.com/docs/5.3/getting-started/introduction/
 
-Placeholder Img- https://www.pexels.com/search/tech%20background/
+NYT API - https://developer.nytimes.com/
+
+Placeholder Image - https://www.pexels.com/search/tech%20background/

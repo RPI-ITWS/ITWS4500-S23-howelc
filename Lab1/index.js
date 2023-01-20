@@ -21,11 +21,13 @@ function makeNewsTicker(newsArticles) {
     let newsItems = document.getElementsByClassName("news-item");
     largeItem.href = newsArticles[0].url;
     //make the large news item
-    let largeItemHTML = '<img src="' + checkImgNull(newsArticles[0].multimedia) + '" class="card-img-top pb-3" alt="..."></img>';
+    let largeItemHTML = '<div class="card-body">'
+    largeItemHTML = '<img src="' + checkImgNull(newsArticles[0].multimedia) + '" class="card-img-top pb-3" alt="..."></img>';
     largeItemHTML += '<h5 class="card-title px-3">' + newsArticles[0].title + '</h5>';
     largeItemHTML += '<h6 class="card-subtitle mb-2 text-muted px-3">By ' + changeByLine(newsArticles[0].byline) + '</h6>';
     largeItemHTML += '<p class="card-text px-3">' + newsArticles[0].abstract + '</p>';
     largeItemHTML += '<p class="card-text px-3"> <b>Tags</b>: ' + getTags(newsArticles[0].des_facet) + '</p>';
+    largeItemHTML += '</div>';
     largeItemHTML += '<div class="card-footer mt-auto">' + getTimeSinceUpload(newsArticles[0].published_date) + '</div>';
     largeItem.insertAdjacentHTML('beforeend', largeItemHTML);
     //make the small news items
@@ -34,8 +36,10 @@ function makeNewsTicker(newsArticles) {
     for (let i = 0; i < newsItems.length; i++) {
         newsItems[i].replaceChildren();
         newsItems[i].href = newsArticles[newsindex].url;
-        let newsItemHTML = '<img src="' + checkImgNull(newsArticles[newsindex].multimedia) + '" class="card-img-top pb-3" alt="..."></img>';
-        newsItemHTML += '<h5 class="card-title px-2">' + newsArticles[newsindex].title + '</h5>';
+        let newsItemHTML = '<img src="' + checkImgNull(newsArticles[newsindex].multimedia) + '" class="card-img-top" alt="..."></img>';
+        newsItemHTML += '<div class="card-body">'
+        newsItemHTML += '<h5 class="card-title">' + newsArticles[newsindex].title + '</h5>';
+        newsItemHTML += '</div>';
         newsItemHTML += '<div class="card-footer mt-auto">' + getTimeSinceUpload(newsArticles[newsindex].published_date) + ' &bull; ' + changeByLine(newsArticles[newsindex].byline) + '</div>'
         newsItems[i].insertAdjacentHTML('beforeend', newsItemHTML);
         newsindex++;
@@ -46,16 +50,17 @@ function makeNewsTicker(newsArticles) {
         for (let i = 0; i < newsItems.length; i++) {
             newsItems[i].replaceChildren();
             newsItems[i].href = newsArticles[newsindex].url;
-            let newsItemHTML = '<img src="' + checkImgNull(newsArticles[newsindex].multimedia) + '" class="card-img-top pb-3" alt="..."></img>';
-            newsItemHTML += '<h5 class="card-title px-2">' + newsArticles[newsindex].title + '</h5>';
-            newsItemHTML += '<div class="card-footer mt-auto">' + getTimeSinceUpload(newsArticles[newsindex].published_date) + ' &bull; ' + changeByLine(newsArticles[newsindex].byline) + '</div>'
+            let newsItemHTML = '<img src="' + checkImgNull(newsArticles[newsindex].multimedia) + '" class="card-img-top animate" alt="..."></img>';
+            newsItemHTML += '<div class="card-body animate">'
+            newsItemHTML += '<h5 class="card-title animate">' + newsArticles[newsindex].title + '</h5>';
+            newsItemHTML += '</div>';
+            newsItemHTML += '<div class="card-footer mt-auto animate">' + getTimeSinceUpload(newsArticles[newsindex].published_date) + ' &bull; ' + changeByLine(newsArticles[newsindex].byline) + '</div>'
             newsItems[i].insertAdjacentHTML('beforeend', newsItemHTML);
             newsindex++;
             if (newsindex == newsArticles.length - 1) {
                 newsindex = 1;
             }
         }
-
     }, 10000);
 }
 

@@ -26,15 +26,11 @@ body {
     font-family: var(--header-font);
     font-size: var(--fs-head-lg);
     color: var(--Secondary);
-    margin: 0;
-    padding: 0;
 }
 
 #news-items {
-    height: 80vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     gap: 1rem;
 }
 
@@ -46,7 +42,6 @@ body {
     box-shadow: 0rem 0rem 0.25rem rgba(255, 255, 255, .5);
     color: var(--Secondary);
     font-family: var(--header-font);
-
 }
 
 .news-item-lg img.card-img-top{
@@ -61,6 +56,7 @@ p.news-item-lg, p.news-item{
     box-shadow: 0rem 0rem 0.25rem rgba(255, 255, 255, .5);
     color: var(--Secondary);
     font-family: var(--header-font);
+    min-height: 450px;
 }
 
 a.card,
@@ -81,7 +77,32 @@ a.card:hover{
     box-shadow: 0rem 0rem 0.75rem rgba(255, 255, 255, .5);
 }
 
+footer {
+    color: var(--Secondary);
+    font-family: var(--header-font);
+    font-size: var(--fs-body);
+}
 
+footer a {
+    color: var(--Secondary);
+    text-decoration: none;
+    font-size: var(--fs-body-lg);
+}
+
+
+.animate{
+    animation: fade 1s;
+}
+
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 /*media queries for changing screen sizes*/
 @media only screen and (min-width: 280px) {
@@ -103,13 +124,21 @@ a.card:hover{
     }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 992px) {
+    :root {
+        font-size: 95%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
     #news-items {
-        height: 80vh;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
         gap: 1rem;
+    }
+
+    .news-item{
+        min-height: auto;
     }
 
     .news-item-lg {
@@ -118,12 +147,6 @@ a.card:hover{
         grid-row-start: 1;
         grid-row-end: 2;
         box-shadow: 0rem 0rem 0.25rem rgba(255, 255, 255, .5);
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    :root {
-        font-size: 95%;
     }
 }
 
