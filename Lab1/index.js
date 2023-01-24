@@ -79,8 +79,9 @@ function makeNewsTicker(newsArticles) {
     largeItem.replaceChildren();
     largeItem.href = newsArticles[0].url;
     //make the large news item
-    let largeItemHTML = '<div class="card-body">'
-    largeItemHTML = '<img src="' + checkImgNull(newsArticles[0].multimedia) + '" class="card-img-top pb-3" alt="..."></img>';
+    let largeItemHTML = '<div class="card-header">Newest</div>';
+    largeItemHTML += '<img src="' + checkImgNull(newsArticles[0].multimedia) + '" class="card-img-top pb-3" alt="..."></img>';
+    largeItemHTML += '<div class="card-body">'
     largeItemHTML += '<h5 class="card-title px-3">' + newsArticles[0].title + '</h5>';
     largeItemHTML += '<h6 class="card-subtitle mb-2 text-muted px-3">By ' + changeByLine(newsArticles[0].byline) + '</h6>';
     largeItemHTML += '<p class="card-text px-3">' + newsArticles[0].abstract + '</p>';
