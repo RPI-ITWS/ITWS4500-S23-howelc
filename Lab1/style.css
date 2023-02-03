@@ -75,6 +75,7 @@ a.card:hover{
     box-shadow: 0rem 0rem 0.75rem rgba(255, 255, 255, .5);
 }
 
+
 footer {
     color: var(--Secondary);
     font-family: var(--header-font);

@@ -1,0 +1,120 @@
+/*Root element with variables to use throughout enter website*/
+:root {
+    /*colors*/
+    --App-Primary: #0d6efd;
+    /*typography*/
+    --fs-caption: 0.75rem;
+    --fs-body: 1rem;
+    --fs-body-large: 1.25rem;
+    --fs-head: 1.5rem;
+    --fs-head-large: 2rem;
+    --fs-head-xl: 4rem;
+    /*fonts*/
+    --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*basic body styling*/
+html {
+    scroll-padding-top: 12vh;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-kerning: normal;
+    text-rendering: optimizeLegibility;
+    text-decoration-skip-ink: auto;
+    image-rendering: auto;
+    -webkit-line-break: normal;
+    -moz-line-break: normal;
+    -ms-line-break: normal;
+    line-break: normal;
+    orphans: 3;
+    widows: 3;
+    hanging-punctuation: first allow-end last;
+}
+
+/* CSS for basic styling nothing too crazy */
+.head-text-1, .head-text-2{
+    color: var(--App-Primary);
+    font-family: var(--font);
+}
+.head-text-1{
+    font-size: var(--fs-head-large);
+}
+.head-text-2{
+    font-size: var(--fs-head);
+}
+.head-text-3{
+    font-size: var(--fs-head);
+    font-family: var(--font);
+}
+.body-text{
+    font-size: var(--fs-body-large);
+    font-family: var(--font);
+}
+.weather-icon{
+    height: 4rem;
+}
+
+button.nav-link{
+    font-family: var(--font);
+    font-size: var(--fs-body-large);
+}
+.date-text{
+    font-family: var(--font);
+    font-size: var(--fs-body);
+}
+.img-custom{
+    width: 20rem;
+}
+.news-link{
+    text-decoration: none;
+    color: initial;
+}
+
+
+
+/*media queries for changing screen sizes*/
+@media only screen and (min-width: 280px) {
+    :root {
+        font-size: 70%;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    :root {
+        font-size: 85%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    :root {
+        font-size: 90%;
+    }
+
+}
+
+
+@media only screen and (min-width: 992px) {
+    :root {
+        font-size: 95%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    :root {
+        font-size: 100%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    :root {
+        font-size: 110%;
+    }
+}
