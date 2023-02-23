@@ -1,0 +1,385 @@
+/*Root element with variables to use throughout enter website*/
+:root {
+    /*colors*/
+    --Primary: #0504aa;
+    --Secondary: #e10600;
+    /*typography*/
+    --fs-caption: 0.75rem;
+    --fs-body: 1rem;
+    --fs-body-lg: 1.25rem;
+    --fs-head: 1.5rem;
+    --fs-head-md: 2rem;
+    --fs-head-lg: 2.5rem;
+    --fs-head-xl: 3rem;
+    --fs-head-xxl: 4rem;
+    /*fonts*/
+    --header-font: 'Inter', sans-serif;
+    --body-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #121212;
+
+}
+
+main {
+    flex: 1;
+}
+
+.header-text {
+    color: white;
+    font-weight: 50;
+    font-family: 'Monoton';
+    border: 3px solid white;
+    border-radius: 5px;
+    animation: neonpulse 1s infinite alternate;
+    background-color: black;
+}
+
+
+.header-text:hover {
+    text-shadow: 0 0 0.3rem #fff,
+        0 0 0.6rem #fff,
+        0 0 1.2rem #0504aa,
+        0 0 1.2rem #0504aa,
+        0 0 1.2rem #0504aa,
+        0 0 1.2rem #0504aa,
+        0 0 1.2rem #0504aa;
+    box-shadow: 0 0 0.2rem #fff,
+        0 0 0.4rem #fff,
+        0 0 0.8rem #e10600,
+        0 0 0.8rem #e10600,
+        0 0 0.8rem #e10600,
+        inset 0 0 1.2rem #e10600,
+        0 0 0.8rem #e10600;
+    animation: none;
+}
+
+
+@keyframes neonpulse {
+    0% {
+        text-shadow: 0 0 0.18rem #fff,
+            0 0 0.35rem #fff,
+            0 0 0.7rem #0504aa,
+            0 0 0.7rem #0504aa,
+            0 0 0.7rem #0504aa,
+            0 0 0.7rem #0504aa,
+            0 0 0.7rem #0504aa;
+
+        box-shadow: 0 0 0.1rem #fff,
+            0 0 0.2rem #fff,
+            0 0 0.4rem #e10600,
+            0 0 0.4rem #e10600,
+            0 0 0.4rem #e10600,
+            inset 0 0 0.6rem #e10600,
+            0 0 0.4rem #e10600;
+    }
+
+    100% {
+        text-shadow: 0 0 0.25rem #fff,
+            0 0 0.5rem #fff,
+            0 0 1rem #0504aa,
+            0 0 1rem #0504aa,
+            0 0 1rem #0504aa,
+            0 0 1rem #0504aa,
+            0 0 1rem #0504aa;
+
+        box-shadow: 0 0 0.15rem #fff,
+            0 0 0.25rem #fff,
+            0 0 0.5rem #e10600,
+            0 0 0.5rem #e10600,
+            0 0 0.5rem #e10600,
+            inset 0 0 0.75rem #e10600,
+            0 0 0.5rem #e10600;
+    }
+
+}
+
+
+a.nav-link {
+    color: white;
+    font-family: var(--header-font);
+    font-size: var(--fs-body-lg);
+    font-weight: 100;
+}
+
+a.nav-link:hover,
+a.nav-link:focus,
+a.nav-link:active {
+    color: white;
+    text-shadow: 0 0 0.125rem #fff,
+        0 0 0.25rem #fff,
+        0 0 0.5rem #0504aa,
+        0 0 0.5rem #0504aa,
+        0 0 0.5rem #0504aa,
+        0 0 0.5rem #0504aa,
+        0 0 0.5rem #0504aa;
+}
+
+
+.navbar-nav .nav-link.active {
+    color: white;
+    text-shadow: 0 0 0.125rem #fff,
+        0 0 0.25rem #fff,
+        0 0 0.5rem #0504aa,
+        0 0 0.5rem #0504aa,
+        0 0 0.5rem #0504aa,
+        0 0 0.5rem #0504aa,
+        0 0 0.5rem #0504aa;
+}
+
+.navbar-nav .nav-link.active:hover {
+    color: white;
+    text-shadow: 0 0 0.125rem #fff,
+        0 0 0.25rem #fff,
+        0 0 0.5rem #e10600,
+        0 0 0.5rem #e10600,
+        0 0 0.5rem #e10600,
+        0 0 0.5rem #e10600,
+        0 0 0.5rem #e10600;
+}
+
+.home-page-h2 {
+    color: white;
+    font-family: var(--header-font);
+    font-size: var(--fs-head);
+    font-weight: 100;
+}
+
+
+
+.game-imgs-trivia {
+    background-image: url("./trivia-img.png");
+    min-height: 10rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 3px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 0.1rem #fff,
+        0 0 0.2rem #fff,
+        0 0 0.4rem #e10600,
+        0 0 0.4rem #e10600,
+        0 0 0.4rem #e10600,
+        inset 0 0 0.6rem #e10600,
+        0 0 0.4rem #e10600;
+    transition: transform 0.5s;
+    display: flex;
+    align-items: last baseline;
+}
+
+.game-imgs-trivia:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+.popular-games {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 2rem;
+}
+
+.game-img-txt {
+    color: white;
+    font-family: var(--header-font);
+    font-size: var(--fs-body-lg);
+    font-weight: 100;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+a.game-link {
+    text-decoration: none;
+}
+
+#trivia-h2 {
+    color: white;
+    font-family: var(--header-font);
+    font-size: var(--fs-head);
+    font-weight: 100;
+}
+
+.trivia-card {
+    border: 3px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 0.1rem #fff,
+        0 0 0.2rem #fff,
+        0 0 0.4rem #e10600,
+        0 0 0.4rem #e10600,
+        0 0 0.4rem #e10600,
+        inset 0 0 0.6rem #e10600,
+        0 0 0.4rem #e10600;
+    transition: transform 0.5s;
+    display: flex;
+    flex-direction: column;
+}
+
+#score-container {
+    color: white;
+    font-family: var(--header-font);
+    font-size: var(--fs-head);
+    display: flex;
+
+}
+
+hr {
+    color: white;
+}
+
+#button-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.btn-trivia {
+    margin: 0.5rem;
+    color: white;
+    font-family: var(--header-font);
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 0.1rem #fff,
+        0 0 0.2rem #fff,
+        0 0 0.4rem #e10600,
+        0 0 0.4rem #e10600,
+        0 0 0.4rem #e10600,
+        inset 0 0 0.6rem #e10600,
+        0 0 0.4rem #e10600;
+}
+
+.btn-trivia:hover, .btn-trivia:focus {
+    transform: scale(1.1);
+    border: 3px solid white;
+    color: white;
+    text-shadow: 0 0 0.125rem #fff,
+        0 0 0.25rem #fff,
+        0 0 0.5rem #0504aa,
+        0 0 0.5rem #0504aa,
+        0 0 0.5rem #0504aa,
+        0 0 0.5rem #0504aa,
+        0 0 0.5rem #0504aa;
+}
+
+.trivia-rule-list {
+    color: white;
+    font-family: var(--body-font);
+    font-size: var(--fs-body-lg);
+}
+
+.answer-pill {
+    background-color: black;
+    box-shadow: 0rem 0rem 0.25rem rgba(255, 255, 255, .5);
+    border-radius: 5px;
+    color: white;
+    font-family: var(--body-font);
+    font-size: var(--fs-body-lg);
+    padding: 0.5rem;
+    margin: 0.75rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.answer-pill:hover {
+    cursor: pointer;
+    transform: scale(0.99);
+    box-shadow: 0rem 0rem 0.5rem rgba(255, 255, 255, .5);
+}
+
+.answer-pill:active, .answer-pill:focus {
+    transform: scale(0.98);
+    box-shadow: 0rem 0rem 0.5rem rgba(255, 255, 255, .5);
+    background-color: white;
+    color: black;
+}
+
+footer {
+    color: white;
+    font-family: var(--header-font);
+    font-size: var(--fs-body);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: var(--fs-body-lg);
+}
+
+.correct{
+    background-color: green;
+}
+
+.incorrect{
+    background-color: red;
+}
+
+#question{
+    color: white;
+    font-family: var(--header-font);
+    font-size: var(--fs-body-lg);
+    margin-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+.end-score{
+    color: white;
+    font-family: var(--header-font);
+    font-size: var(--fs-head);
+    margin-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+/*media queries for changing screen sizes*/
+@media only screen and (min-width: 280px) {
+    :root {
+        font-size: 70%;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    :root {
+        font-size: 85%;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    :root {
+        font-size: 90%;
+    }
+
+    .popular-games {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    :root {
+        font-size: 95%;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+    :root {
+        font-size: 100%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    :root {
+        font-size: 110%;
+    }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- CSS and Fonts -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Monoton&display=swap" rel="stylesheet">
+    <!--Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"
+        defer></script>
+    <!-- JS -->
+    <script src="script.js" defer></script>
+    <title>Lab03</title>
+</head>
+
+<body class="min-vh-100 container-xxl d-flex flex-column">
+    <header class="pt-3">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a href="" class="navbar-brand align-items-center">
+                <h1 class="header-text p-2 align-items-center">Fun Web Games</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu"
+                aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav-menu">
+                <ul class="navbar-nav flex-grow-1 justify-content-end pe-5 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Games</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Genres
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Trivia</a></li>
+                            <li><a class="dropdown-item" href="#">Word Games</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="py-2">
+        <section class="trivia-sec">
+            <h2 id="trivia-h2" class="pb-2"></h2>
+            <div class="trivia-card">
+                <div id="score-container" class="pt-2 px-3 justify-content-between">
+                    
+                    <div id="score"><b>Rules</b></div>
+                    <div id="timer"></div>
+                </div>
+                <hr id="score-line">
+                <div id="trivia-container">
+                    <div id="question"></div>
+                    <ol class="trivia-rule-list">
+                        <li>You have 15 seconds to answer each question.</li>
+                        <li>Each correct answer is worth 1 point.</li>
+                        <li>Each incorrect/unanswered question is worth 0 points.</li>
+                        <li>Once an answer is selected it cannot be changed.</li>
+                        <li>Once the timer runs out, the next question will be displayed.</li>
+                    </ol>
+                </div>
+                <hr id="button-line">
+                <div id="button-container" class="pb-2 px-2">
+                    <button id="start-btn" class="btn btn-trivia">Start</button>
+                    <a role="button" href="./index.html" id="exit-btn" class="btn btn-trivia">Exit</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="post-put-delete d-flex">
+        <button id="post" class="btn btn-success">Post</button>
+        <button id="put" class="btn btn-warning">Put</button>
+        <button id="delete" class="btn btn-danger">Delete</button>
+    </div>
+    <footer class="d-flex justify-content-between border-top align-items-center mt-auto">
+        <div class="d-flex align-items-center p-3">
+            <p>Made by Cian Howell</p>
+        </div>
+        <div class="d-flex align-items-center">
+            <a href="https://www.linkedin.com/in/cianhowell/" class="p-1"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/RPI-ITWS/ITWS4500-S23-howelc/tree/main/Lab1" class="p-1"><i
+                    class="bi bi-github"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
