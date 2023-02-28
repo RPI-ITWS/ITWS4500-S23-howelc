@@ -7,7 +7,7 @@ const app = express();
 // Set up cors
 app.use(cors({ origin: 'http://localhost:3000' }));
 // Set up express serve static files
-app.use('/quiz1', express.static('./public'));
+app.use('/quiz1', express.static('./static'));
 
 app.get('/uni/:name', (req, res) => {
     fetch('http://universities.hipolabs.com/search?name=' + req.params['name'])
