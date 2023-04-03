@@ -1,3 +1,4 @@
+
 const standardURL = "https://howelc.eastus.cloudapp.azure.com/node/uni";
 let universityName = "rensselaer";
 let searchName;
