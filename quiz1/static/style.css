@@ -1,0 +1,107 @@
+:root {
+    /*colors*/
+    --Primary: #0504aa;
+    --Secondary: #e10600;
+    /*typography*/
+    --fs-caption: 0.75rem;
+    --fs-body: 1rem;
+    --fs-body-lg: 1.25rem;
+    --fs-head: 1.5rem;
+    --fs-head-md: 2rem;
+    --fs-head-lg: 2.5rem;
+    --fs-head-xl: 3rem;
+    --fs-head-xxl: 4rem;
+    /*fonts*/
+    --header-font: 'Inter', sans-serif;
+    --body-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #121212;
+
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    color: white;
+    font-family: var(--header-font);
+    font-size: var(--fs-body);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: var(--fs-body-lg);
+}
+
+#college-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.college{
+    color: white;
+    font-family: var(--header-font);
+    font-size: var(--fs-body-lg);
+    text-align: center;
+    border : 1px solid white;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    width: 80%;
+    box-shadow: white 0px 0px 5px;
+
+
+}
+
+.search-result {
+   color: white;
+    font-family: var(--header-font);
+    font-size: var(--fs-head-md);
+}
+
+/*media queries for changing screen sizes*/
+@media only screen and (min-width: 280px) {
+    :root {
+        font-size: 70%;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    :root {
+        font-size: 85%;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    :root {
+        font-size: 90%;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+    :root {
+        font-size: 95%;
+    }
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+    :root {
+        font-size: 100%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    :root {
+        font-size: 110%;
+    }
+}
