@@ -4,12 +4,16 @@ import { Container } from 'react-bootstrap'
 import { useEffect, useState } from 'react'
 import DataTable from '../components/datatable'
 import { Button } from 'react-bootstrap'
+import DataVisualization1 from '../components/datavisualization1'
+import DataVisualization2 from '../components/datavisualization2'
 
 function App() {
 
   const [county, setCounty] = useState<any>(["Rensselaer", "NY"]);
 
   const [countyData, setData] = useState<any>();
+
+  const [loading, setLoading] = useState<boolean>(false);
 
   function countyCallBack(county: any) {
     county = county[0].split(',');
@@ -18,13 +22,12 @@ function App() {
   }
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      fetch(`https://howelc.eastus.cloudapp.azure.com/node/${county[1]}/${county[0]}`)
-        .then(res => res.json())
-        .then(data => {
-          setData(data);
-        })
-    }, 1000);
+    fetch(`https://howelc.eastus.cloudapp.azure.com/node/${county[1]}/${county[0]}`)
+      .then(res => res.json())
+      .then(data => {
+        setData(data);
+      })
+    ;
   }, [county])
 
 
@@ -42,10 +45,12 @@ function App() {
             .then(data => {
               if (data.success) {
                 alert('Data added successfully');
+                setTimeout(() => {
+                  setCounty(county);
+                }, 30000);
               } else {
                 alert('Data already exists or there was an error');
               }
-
 
             })
         }}>Add Data</Button>
@@ -56,6 +61,9 @@ function App() {
             .then(data => {
               if (data.success) {
                 alert('Data updated successfully');
+                setTimeout(() => {
+                  setCounty(county);
+                }, 30000);
               } else {
                 alert('Data does not exist or there was an error');
               }
@@ -70,6 +78,9 @@ function App() {
             .then(data => {
               if (data.success) {
                 alert('Data deleted successfully');
+                setTimeout(() => {
+                  setCounty(county);
+                }, 30000);
               } else {
                 alert('Data does not exist or there was an error');
               }
@@ -81,7 +92,12 @@ function App() {
       <DataTable
         tableData={countyData}
       />
-
+      <DataVisualization1
+        tableData={countyData}
+      />
+      <DataVisualization2
+        tableData={countyData}
+      />
     </div>
   )
 }

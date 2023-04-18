@@ -26,8 +26,8 @@ export default function DataTable(props: any) {
                             <th>Month</th>
                             <th>Surface Pressure {"("}kPa{")"}</th>
                             <th>Wind Direction at 10m {"("}degrees{")"}</th>
-                            <th>Wind Speed at 10m {"("}m/s{")"}</th>
                             <th>Wind Direction at 50m {"("}degrees{")"}</th>
+                            <th>Wind Speed at 10m {"("}m/s{")"}</th>
                             <th>Wind Speed at 50m {"("}m/s{")"}</th>
 
                         </tr>

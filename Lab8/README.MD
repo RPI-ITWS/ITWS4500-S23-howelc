@@ -25,6 +25,7 @@ In the process of creating my wind data app using the MERN stack, I utilized sev
     d. I implemented state management using React hooks to store and manage wind data across components.
     e. I implemented API calls to my backend server using the Fetch API to fetch wind data and store it in my frontend state.
     f. I styled my components using CSS and react-bootstrap, which I installed using yarn add react-bootstrap bootstrap.
+    g. I implemented data visualization using the react-chartjs-2 package, which I installed using yarn add react-chartjs-2 chart.js.
 
     Testing and debugging: I tested my app thoroughly by simulating user interactions and checking for errors in the console. I used browser developer tools to inspect elements, network requests, and app state.
 
